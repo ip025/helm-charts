@@ -91,7 +91,7 @@ spec:
       {{- include "loki.selectorLabels" . | nindent 6 }}
   ingress:
     - ports:
-        - port: http-metrics
+        - port: http
           protocol: TCP
     {{- if .Values.networkPolicy.metrics.cidrs }}
       from:
